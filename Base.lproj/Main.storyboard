@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="boring_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="平安" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-d0-JYA">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DTo-dT-szN">
+                                <rect key="frame" x="280" y="141" width="336" height="31"/>
+                                <connections>
+                                    <action selector="slidermovedWith_slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="p4C-nb-PGD"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHB-Fh-LSY">
+                                <rect key="frame" x="398" y="189" width="100" height="37"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="我瞄准了" backgroundImage="Button-Highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="BtZ-jD-2dW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFf-u2-jcf">
+                                <rect key="frame" x="218" y="284" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" image="StartOverIcon" backgroundImage="SmallButton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="o6j-b5-nBF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB4-BS-b6X">
+                                <rect key="frame" x="245" y="142" width="23" height="20"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIf-48-S5G">
+                                <rect key="frame" x="621" y="142" width="38" height="20"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scores:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-71-tsb">
+                                <rect key="frame" x="281" y="291" width="48" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-E5-j2h">
+                                <rect key="frame" x="345" y="292" width="59" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rounds:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNI-TH-qhC">
+                                <rect key="frame" x="514" y="292" width="51" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhF-Ta-ihU">
+                                <rect key="frame" x="583" y="292" width="30" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEW-P8-uYo">
+                                <rect key="frame" x="534" y="88" width="32" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="移动进度条让它的值尽可能接近" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-xU-ZfD">
+                                <rect key="frame" x="282" y="88" width="238" height="23"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V6-sm-kVU">
+                                <rect key="frame" x="669" y="283" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="InfoButton" backgroundImage="SmallButton"/>
+                                <connections>
+                                    <segue destination="ZV7-BT-8kX" kind="presentation" modalTransitionStyle="crossDissolve" id="OTt-UP-D82"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eIf-48-S5G" firstAttribute="leading" secondItem="DTo-dT-szN" secondAttribute="trailing" constant="6" id="0OK-02-IEd"/>
+                            <constraint firstItem="mHB-Fh-LSY" firstAttribute="top" secondItem="DTo-dT-szN" secondAttribute="bottom" constant="18" id="8QM-25-ZFe"/>
+                            <constraint firstItem="DTo-dT-szN" firstAttribute="leading" secondItem="fB4-BS-b6X" secondAttribute="trailing" constant="14" id="E0a-gG-bMZ"/>
+                            <constraint firstItem="PQJ-xU-ZfD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="JF8-KE-feo"/>
+                            <constraint firstItem="TpF-d0-JYA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jvy-0Q-b6c"/>
+                            <constraint firstAttribute="bottom" secondItem="TpF-d0-JYA" secondAttribute="bottom" id="Kav-9l-IGy"/>
+                            <constraint firstItem="PQJ-xU-ZfD" firstAttribute="top" secondItem="cEW-P8-uYo" secondAttribute="top" id="NLq-Yn-2gQ"/>
+                            <constraint firstItem="cEW-P8-uYo" firstAttribute="leading" secondItem="PQJ-xU-ZfD" secondAttribute="trailing" constant="14" id="Qw8-we-U4b"/>
+                            <constraint firstItem="DTo-dT-szN" firstAttribute="centerX" secondItem="TpF-d0-JYA" secondAttribute="centerX" id="aSp-Am-sqX"/>
+                            <constraint firstAttribute="trailing" secondItem="TpF-d0-JYA" secondAttribute="trailing" id="cGT-0T-guv"/>
+                            <constraint firstItem="DTo-dT-szN" firstAttribute="top" secondItem="PQJ-xU-ZfD" secondAttribute="bottom" constant="30" id="cSf-Ov-Ke2"/>
+                            <constraint firstItem="fB4-BS-b6X" firstAttribute="baseline" secondItem="eIf-48-S5G" secondAttribute="baseline" id="dCv-x7-pTw"/>
+                            <constraint firstItem="fB4-BS-b6X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="iHw-se-7lQ"/>
+                            <constraint firstItem="DTo-dT-szN" firstAttribute="centerX" secondItem="mHB-Fh-LSY" secondAttribute="centerX" id="iIA-Wv-Z3U"/>
+                            <constraint firstItem="TpF-d0-JYA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kgq-d3-e6x"/>
+                            <constraint firstItem="PQJ-xU-ZfD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="w8S-af-bb1"/>
+                            <constraint firstItem="DTo-dT-szN" firstAttribute="leading" secondItem="PQJ-xU-ZfD" secondAttribute="leading" id="yDA-EW-M5J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="_slider" destination="DTo-dT-szN" id="Pb1-b9-IDz"/>
+                        <outlet property="roundLabel" destination="PhF-Ta-ihU" id="4Yn-XP-dmT"/>
+                        <outlet property="targetLabel" destination="cEW-P8-uYo" id="2kb-Lf-ajg"/>
+                        <outlet property="targetLabel1" destination="F9B-E5-j2h" id="J8O-9e-q4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.883928571428569" y="24.637681159420293"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="CuB-Nd-CUp">
+            <objects>
+                <viewController id="ZV7-BT-8kX" customClass="AboutViewController" customModule="boring_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Ec-Iy-J8v">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="樱花" translatesAutoresizingMaskIntoConstraints="NO" id="W0N-tJ-hIj">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-va-gRd">
+                                <rect key="frame" x="249" y="94" width="434" height="227"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.31940282534246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.(其实前面是官方废话，总之谢谢各位大佬百忙之中玩这个无聊的小游戏)--LZY</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0d-67-puR">
+                                <rect key="frame" x="424" y="338" width="48" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="CLOSE" backgroundImage="SmallButton">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close" destination="ZV7-BT-8kX" eventType="touchUpInside" id="Zfo-b8-Eu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ccg-va-gRd" firstAttribute="top" secondItem="WwW-A4-l5w" secondAttribute="top" constant="94" id="8ai-dD-DqQ"/>
+                            <constraint firstAttribute="trailing" secondItem="W0N-tJ-hIj" secondAttribute="trailing" id="EoU-iU-i8I"/>
+                            <constraint firstItem="B0d-67-puR" firstAttribute="bottom" secondItem="WwW-A4-l5w" secondAttribute="bottom" constant="-23" id="Hws-ri-pr3"/>
+                            <constraint firstItem="WwW-A4-l5w" firstAttribute="trailing" secondItem="ccg-va-gRd" secondAttribute="trailing" constant="169" id="JT4-32-ylV"/>
+                            <constraint firstItem="W0N-tJ-hIj" firstAttribute="top" secondItem="WwW-A4-l5w" secondAttribute="top" id="Tge-Yy-8QT"/>
+                            <constraint firstItem="B0d-67-puR" firstAttribute="centerX" secondItem="6Ec-Iy-J8v" secondAttribute="centerX" id="Vlm-Rm-8sP"/>
+                            <constraint firstItem="B0d-67-puR" firstAttribute="top" secondItem="ccg-va-gRd" secondAttribute="bottom" constant="17" id="dZ7-hH-bw5"/>
+                            <constraint firstAttribute="bottom" secondItem="W0N-tJ-hIj" secondAttribute="bottom" id="eBA-Xe-c9v"/>
+                            <constraint firstItem="ccg-va-gRd" firstAttribute="leading" secondItem="WwW-A4-l5w" secondAttribute="leading" constant="205" id="o74-K2-shV"/>
+                            <constraint firstItem="W0N-tJ-hIj" firstAttribute="leading" secondItem="6Ec-Iy-J8v" secondAttribute="leading" id="wIC-7p-C4l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WwW-A4-l5w"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eS-1U-IQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761.38392857142856" y="24.637681159420293"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button-Highlighted" width="100" height="37"/>
+        <image name="InfoButton" width="10" height="22"/>
+        <image name="SmallButton" width="32" height="32"/>
+        <image name="StartOverIcon" width="20" height="20"/>
+        <image name="平安" width="2880" height="1800"/>
+        <image name="樱花" width="2880" height="1800"/>
+    </resources>
+</document>
